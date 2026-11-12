@@ -1,0 +1,764 @@
+{
+ "start": "2026-11-12T13:54:13.040Z",
+ "round": 1,
+ "idle": 0,
+ "errors": 0,
+ "status": "fail",
+ "history": [
+  {
+   "at": "2026-11-12T14:06:53.208Z",
+   "mode": "manual",
+   "status": "fail",
+   "fails": 19,
+   "round": 1,
+   "reused": false,
+   "stopHookActive": false
+  }
+ ],
+ "max": 3,
+ "marker": {
+  "page": null,
+  "dir": "C:\\Users\\fifin\\OneDrive\\Desktop\\umkm",
+  "kind": "software",
+  "start": "2026-11-12T13:54:13.040Z",
+  "by": "start.mjs",
+  "url": "http://localhost:3000/login",
+  "category": "personal finance and savings tracking app",
+  "primary": "Record a transaction"
+ },
+ "manual": true,
+ "roundKey": "06ac9e7c3ccbfaf2:da39a3ee",
+ "roundFree": false,
+ "idleFree": false,
+ "blockKey": null,
+ "fp": "06ac9e7c3ccbfaf2",
+ "page": "http://localhost:3000/login",
+ "found": {
+  "fails": [
+   {
+    "check": "hero-fill",
+    "where": "main.auth-shell.min-h-screen > section.flex.min-h-screen \"Masuk ke akunmu\"",
+    "msg": "the next section shows on the first screen: it starts at 233px on a 900px screen (the hero ends at 900px)",
+    "fix": "let the hero fill the first screen alone (min-height: 100svh, less above it): nothing of the next section on load",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "hero-fill"
+    ],
+    "wheres": [
+     "main.auth-shell.min-h-screen > section.flex.min-h-screen \"Masuk ke akunmu\""
+    ]
+   },
+   {
+    "check": "no-visual",
+    "where": "main.auth-shell.min-h-screen > section.hidden.flex-col \"Uang masuk dan keluar, tercatat rapi.\"",
+    "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "no-visual"
+    ],
+    "wheres": [
+     "main.auth-shell.min-h-screen > section.hidden.flex-col \"Uang masuk dan keluar, tercatat rapi.\""
+    ]
+   },
+   {
+    "check": "cta",
+    "where": "main.auth-shell.min-h-screen > section.hidden.flex-col",
+    "msg": "the hero has no button (the nav's does not count)",
+    "fix": "add the action: a button in the hero, one on every priced item, one in the closing section",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "cta"
+    ],
+    "wheres": [
+     "main.auth-shell.min-h-screen > section.hidden.flex-col"
+    ]
+   },
+   {
+    "check": "copy-headline",
+    "where": "(the page)",
+    "msg": "the page has no visible h1",
+    "fix": "put the category noun in the h1 (and who it is for, or where), in 2 to 8 words",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "copy-headline"
+    ],
+    "wheres": [
+     "(the page)"
+    ]
+   },
+   {
+    "check": "heading-scale",
+    "where": "main.auth-shell.min-h-screen > section.hidden.flex-col > div.max-w-xl.pb-10 > h2.text-5xl.font-semibold \"Uang masuk dan keluar, tercatat rapi.\"",
+    "msg": "h2 headings in 2 sizes, 30px (\"Masuk ke akunmu\") to 60px (x2.00)",
+    "fix": "size headings by level: the h1 largest, one size per level, each level below the one above",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "heading-scale"
+    ],
+    "wheres": [
+     "main.auth-shell.min-h-screen > section.hidden.flex-col > div.max-w-xl.pb-10 > h2.text-5xl.font-semibold \"Uang masuk dan keluar, tercatat rapi.\""
+    ]
+   },
+   {
+    "check": "focus-visible",
+    "where": "script:nth-of-type(10) > nextjs-portal",
+    "msg": "Tab stop 6, nextjs-portal \"\": the focus lands on something you cannot see",
+    "fix": "keep the kit's ring (system.css :focus-visible, 2px in --action, there at once); a control that hides itself shows on focus",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "focus-visible"
+    ],
+    "wheres": [
+     "script:nth-of-type(10) > nextjs-portal"
+    ]
+   },
+   {
+    "check": "moment-none",
+    "where": "(the page)",
+    "msg": "a software page (--type) deals no moment: every kind carries one, two on a long page (moments.md)",
+    "fix": "deal one (moments.mjs pick --page software) and mount it in its own section",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "moment-none"
+    ],
+    "wheres": [
+     "(the page)"
+    ]
+   },
+   {
+    "check": "hero-screen",
+    "where": "main.auth-shell.min-h-screen > section.flex.min-h-screen \"NNabungNihSelamat datang kembaliMasuk ke\"",
+    "msg": "900px of the next section shows on the first screen (from 0px on a 900px screen): nothing below the hero shows at load (SR-1)",
+    "fix": "end the hero at the fold so nothing of the next section shows at load (hero height: 100svh)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "hero-screen"
+    ],
+    "wheres": [
+     "main.auth-shell.min-h-screen > section.flex.min-h-screen \"NNabungNihSelamat datang kembaliMasuk ke\""
+    ]
+   },
+   {
+    "check": "one-section",
+    "where": "main.auth-shell.min-h-screen > section.flex.min-h-screen > div.w-full.max-w-md > h2.mt-2.text-3xl \"Masuk ke akunmu\"",
+    "msg": "the screen at scroll 0px (stride 0) shows 900px of section 2 and the heading of section 2 whole and the content of 2 sections, over 24px each beside section 1: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)",
+    "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "one-section"
+    ],
+    "wheres": [
+     "main.auth-shell.min-h-screen > section.flex.min-h-screen > div.w-full.max-w-md > h2.mt-2.text-3xl \"Masuk ke akunmu\""
+    ]
+   },
+   {
+    "check": "one-section",
+    "where": "main.auth-shell.min-h-screen > h1.sr-only \"Masuk ke akunmu\"",
+    "msg": "a <h1> sits directly in <main>: every part of <main> is a <section> (SR-4)",
+    "fix": "put every block of <main> in a <section>, and give a band its own section instead of a ground inside one",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "one-section"
+    ],
+    "wheres": [
+     "main.auth-shell.min-h-screen > h1.sr-only \"Masuk ke akunmu\""
+    ]
+   },
+   {
+    "check": "one-heading",
+    "where": "main.auth-shell.min-h-screen > section.hidden.flex-col > div.max-w-xl.pb-10 > h2.text-5xl.font-semibold \"Uang masuk dan keluar, tercatat rapi.\"",
+    "msg": "the hero holds an h2 (1): its heading is the h1, and an h2 opens the next section (SR-5)",
+    "fix": "give each section one h2, first in its .wrap, and the hero only its h1",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "one-heading"
+    ],
+    "wheres": [
+     "main.auth-shell.min-h-screen > section.hidden.flex-col > div.max-w-xl.pb-10 > h2.text-5xl.font-semibold \"Uang masuk dan keluar, tercatat rapi.\""
+    ]
+   },
+   {
+    "check": "one-heading",
+    "where": "main.auth-shell.min-h-screen > section.flex.min-h-screen > div.w-full.max-w-md > h2.mt-2.text-3xl \"Masuk ke akunmu\"",
+    "msg": "headings of two sections show whole on one screen at 1 of 1 scroll positions (100%; at scroll 0px), here with \"Uang masuk dan keluar, tercatat \": at most 3% on a desktop (SR-5)",
+    "fix": "make the sections one screen tall so their headings sit a screen apart and two never share one",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "one-heading"
+    ],
+    "wheres": [
+     "main.auth-shell.min-h-screen > section.flex.min-h-screen > div.w-full.max-w-md > h2.mt-2.text-3xl \"Masuk ke akunmu\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "main.auth-shell.min-h-screen > section.hidden.flex-col \"NNabungNihCatatan keuangan pribadiUang m\"",
+    "msg": "the section needs exactly one in-flow child .wrap (it has 3 in-flow children, 0 .wrap) (SR-6)",
+    "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "main.auth-shell.min-h-screen > section.hidden.flex-col \"NNabungNihCatatan keuangan pribadiUang m\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "main.auth-shell.min-h-screen > section.flex.min-h-screen \"NNabungNihSelamat datang kembaliMasuk ke\"",
+    "msg": "the section needs exactly one in-flow child .wrap (it has 1 in-flow child, 0 .wrap) (SR-6)",
+    "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "main.auth-shell.min-h-screen > section.flex.min-h-screen \"NNabungNihSelamat datang kembaliMasuk ke\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "main.auth-shell.min-h-screen > section.flex.min-h-screen > div.w-full.max-w-md > p.mt-10.text-sm \"Selamat datang kembali\"",
+    "msg": "6 text blocks start on a left line at x 874, 874px from the container's left: text starts on the container's left, or on one split line (x 610, 732, 854) (also \"Masuk ke akunmu\", \"Gunakan email dan password yang \", \"Email\") (SR-6)",
+    "fix": "start the text on the container's left, or on the one split line every split shares",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "main.auth-shell.min-h-screen > section.flex.min-h-screen > div.w-full.max-w-md > p.mt-10.text-sm \"Selamat datang kembali\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "main.auth-shell.min-h-screen > section.flex.min-h-screen > div.w-full.max-w-md > h2.mt-2.text-3xl \"Masuk ke akunmu\"",
+    "msg": "the h2 starts 874px right of the container's left: every h1 and h2 starts on it, 2px either way (SR-6)",
+    "fix": "start the text on the container's left, or on the one split line every split shares",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "main.auth-shell.min-h-screen > section.flex.min-h-screen > div.w-full.max-w-md > h2.mt-2.text-3xl \"Masuk ke akunmu\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "main.auth-shell.min-h-screen > section.hidden.flex-col > div.max-w-xl.pb-10 > p.mb-5.text-sm \"Catatan keuangan pribadi\"",
+    "msg": "4 text blocks start on a left line at x 80, 80px from the container's left: text starts on the container's left, or on one split line (x 610, 732, 854) (also \"Uang masuk dan keluar, tercatat \", \"Lihat saldo dari transaksi dan i\", \"Data keuangan hanya terlihat di \") (and 1 more like it: \"Uang masuk dan keluar, t\") (SR-6)",
+    "fix": "start the text on the container's left, or on the one split line every split shares",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "main.auth-shell.min-h-screen > section.hidden.flex-col > div.max-w-xl.pb-10 > p.mb-5.text-sm \"Catatan keuangan pribadi\""
+    ]
+   },
+   {
+    "check": "no-visual",
+    "where": "main.auth-shell.min-h-screen > section.flex.min-h-screen \"Masuk ke akunmu\"",
+    "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "no-visual"
+    ],
+    "wheres": [
+     "main.auth-shell.min-h-screen > section.flex.min-h-screen \"Masuk ke akunmu\""
+    ]
+   },
+   {
+    "check": "container",
+    "where": "page",
+    "msg": "no .wrap",
+    "fix": "put the content in one .wrap",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "container"
+    ],
+    "wheres": [
+     "page"
+    ]
+   }
+  ],
+  "warns": [
+   {
+    "check": "copy-buttons",
+    "where": "section.flex.min-h-screen > div.w-full.max-w-md > form.mt-7.space-y-5 > button.button-primary.w-full \"Masuk\"",
+    "msg": "\"Masuk\" does not start with a verb (book, buy, try, start, get, see...)",
+    "fix": "label buttons with a verb and what the visitor gets (\"Book a room\", \"Start free trial\")",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "copy-actions",
+    "where": "(the page)",
+    "msg": "the main action \"Record a transaction\" does not read word for word the same in the nav or hero and the closing section",
+    "fix": "few actions, one wording: at most 2 in the hero, the main action word for word in nav, hero and close",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "heading-scale",
+    "where": "(the page)",
+    "msg": "the page has no visible h1",
+    "fix": "size headings by level: the h1 largest, one size per level, each level below the one above",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "main.auth-shell.min-h-screen > section.hidden.flex-col / main.auth-shell.min-h-screen > section.flex.min-h-screen",
+    "msg": "the sections overlap by 610px",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "empty-area",
+    "where": "main.auth-shell.min-h-screen > section.flex.min-h-screen \"Masuk ke akunmu\"",
+    "msg": "40% of the section is empty: 160px above its first content, 176px under its last (p.mt-7.border-t), in its 820px of rows (WARN over 35%, FAIL over 50%)",
+    "fix": "fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "skip-link",
+    "where": "main.auth-shell.min-h-screen > section.hidden.flex-col:nth-of-type(1) > a.inline-flex.items-center \"NabungNih, halaman utama\"",
+    "msg": "the first Tab stop is \"NabungNih, halaman utama\", not a skip link: a keyboard user tabs through the whole nav on every visit",
+    "fix": "add the starter's skip link as the header's first child: <a class=\"skip-link\" href=\"#top\">Skip to content</a>",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "share-meta",
+    "where": "head",
+    "msg": "the head lacks og:title, og:description, og:image, twitter:card, an icon, theme-color: a shared link shows no picture or title of its own",
+    "fix": "copy the head block of starter.html: og tags, twitter:card, the icon and theme-color (references/system.md, Head)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "form-fields",
+    "where": "main.auth-shell.min-h-screen > section.flex.min-h-screen:nth-of-type(2) > div.w-full.max-w-md > form.mt-7.space-y-5",
+    "msg": "the form has no status line (role=\"status\"): sending, sent and errors are never read out",
+    "fix": "give each field its type, autocomplete and inputmode, never block paste or disable the button before a submit, and add the status line (references/system.md, Forms)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-air",
+    "where": "main.auth-shell.min-h-screen > section.flex.min-h-screen \"NNabungNihSelamat datang kembaliMasuk ke\"",
+    "msg": "the content fills 48.1% of the section's height (434 of 900px): 55% or more (40% WARN) (SR-3)",
+    "fix": "fill the section to 55%: more content, a picture or a background layer, or merge it into the section above as its last block",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "tap-size",
+    "where": "main.auth-shell.min-h-screen > section.flex.min-h-screen > div.w-full.max-w-md > a.inline-flex.items-center \"N NabungNih\"",
+    "msg": "a 141x36px tap target: under the 44px a phone needs",
+    "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box",
+    "widths": [
+     390,
+     320
+    ],
+    "from": "consistency"
+   }
+  ],
+  "crashed": [],
+  "seconds": {
+   "consistency": 54,
+   "layout": 16
+  }
+ },
+ "open": [
+  {
+   "check": "hero-fill",
+   "where": "main.auth-shell.min-h-screen > section.flex.min-h-screen \"Masuk ke akunmu\"",
+   "msg": "the next section shows on the first screen: it starts at 233px on a 900px screen (the hero ends at 900px)",
+   "fix": "let the hero fill the first screen alone (min-height: 100svh, less above it): nothing of the next section on load",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "hero-fill"
+   ],
+   "wheres": [
+    "main.auth-shell.min-h-screen > section.flex.min-h-screen \"Masuk ke akunmu\""
+   ]
+  },
+  {
+   "check": "no-visual",
+   "where": "main.auth-shell.min-h-screen > section.hidden.flex-col \"Uang masuk dan keluar, tercatat rapi.\"",
+   "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+   "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "no-visual"
+   ],
+   "wheres": [
+    "main.auth-shell.min-h-screen > section.hidden.flex-col \"Uang masuk dan keluar, tercatat rapi.\""
+   ]
+  },
+  {
+   "check": "cta",
+   "where": "main.auth-shell.min-h-screen > section.hidden.flex-col",
+   "msg": "the hero has no button (the nav's does not count)",
+   "fix": "add the action: a button in the hero, one on every priced item, one in the closing section",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "cta"
+   ],
+   "wheres": [
+    "main.auth-shell.min-h-screen > section.hidden.flex-col"
+   ]
+  },
+  {
+   "check": "copy-headline",
+   "where": "(the page)",
+   "msg": "the page has no visible h1",
+   "fix": "put the category noun in the h1 (and who it is for, or where), in 2 to 8 words",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "copy-headline"
+   ],
+   "wheres": [
+    "(the page)"
+   ]
+  },
+  {
+   "check": "heading-scale",
+   "where": "main.auth-shell.min-h-screen > section.hidden.flex-col > div.max-w-xl.pb-10 > h2.text-5xl.font-semibold \"Uang masuk dan keluar, tercatat rapi.\"",
+   "msg": "h2 headings in 2 sizes, 30px (\"Masuk ke akunmu\") to 60px (x2.00)",
+   "fix": "size headings by level: the h1 largest, one size per level, each level below the one above",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "heading-scale"
+   ],
+   "wheres": [
+    "main.auth-shell.min-h-screen > section.hidden.flex-col > div.max-w-xl.pb-10 > h2.text-5xl.font-semibold \"Uang masuk dan keluar, tercatat rapi.\""
+   ]
+  },
+  {
+   "check": "focus-visible",
+   "where": "script:nth-of-type(10) > nextjs-portal",
+   "msg": "Tab stop 6, nextjs-portal \"\": the focus lands on something you cannot see",
+   "fix": "keep the kit's ring (system.css :focus-visible, 2px in --action, there at once); a control that hides itself shows on focus",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "focus-visible"
+   ],
+   "wheres": [
+    "script:nth-of-type(10) > nextjs-portal"
+   ]
+  },
+  {
+   "check": "moment-none",
+   "where": "(the page)",
+   "msg": "a software page (--type) deals no moment: every kind carries one, two on a long page (moments.md)",
+   "fix": "deal one (moments.mjs pick --page software) and mount it in its own section",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "moment-none"
+   ],
+   "wheres": [
+    "(the page)"
+   ]
+  },
+  {
+   "check": "hero-screen",
+   "where": "main.auth-shell.min-h-screen > section.flex.min-h-screen \"NNabungNihSelamat datang kembaliMasuk ke\"",
+   "msg": "900px of the next section shows on the first screen (from 0px on a 900px screen): nothing below the hero shows at load (SR-1)",
+   "fix": "end the hero at the fold so nothing of the next section shows at load (hero height: 100svh)",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "hero-screen"
+   ],
+   "wheres": [
+    "main.auth-shell.min-h-screen > section.flex.min-h-screen \"NNabungNihSelamat datang kembaliMasuk ke\""
+   ]
+  },
+  {
+   "check": "one-section",
+   "where": "main.auth-shell.min-h-screen > section.flex.min-h-screen > div.w-full.max-w-md > h2.mt-2.text-3xl \"Masuk ke akunmu\"",
+   "msg": "the screen at scroll 0px (stride 0) shows 900px of section 2 and the heading of section 2 whole and the content of 2 sections, over 24px each beside section 1: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)",
+   "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "one-section"
+   ],
+   "wheres": [
+    "main.auth-shell.min-h-screen > section.flex.min-h-screen > div.w-full.max-w-md > h2.mt-2.text-3xl \"Masuk ke akunmu\""
+   ]
+  },
+  {
+   "check": "one-section",
+   "where": "main.auth-shell.min-h-screen > h1.sr-only \"Masuk ke akunmu\"",
+   "msg": "a <h1> sits directly in <main>: every part of <main> is a <section> (SR-4)",
+   "fix": "put every block of <main> in a <section>, and give a band its own section instead of a ground inside one",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "one-section"
+   ],
+   "wheres": [
+    "main.auth-shell.min-h-screen > h1.sr-only \"Masuk ke akunmu\""
+   ]
+  },
+  {
+   "check": "one-heading",
+   "where": "main.auth-shell.min-h-screen > section.hidden.flex-col > div.max-w-xl.pb-10 > h2.text-5xl.font-semibold \"Uang masuk dan keluar, tercatat rapi.\"",
+   "msg": "the hero holds an h2 (1): its heading is the h1, and an h2 opens the next section (SR-5)",
+   "fix": "give each section one h2, first in its .wrap, and the hero only its h1",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "one-heading"
+   ],
+   "wheres": [
+    "main.auth-shell.min-h-screen > section.hidden.flex-col > div.max-w-xl.pb-10 > h2.text-5xl.font-semibold \"Uang masuk dan keluar, tercatat rapi.\""
+   ]
+  },
+  {
+   "check": "one-heading",
+   "where": "main.auth-shell.min-h-screen > section.flex.min-h-screen > div.w-full.max-w-md > h2.mt-2.text-3xl \"Masuk ke akunmu\"",
+   "msg": "headings of two sections show whole on one screen at 1 of 1 scroll positions (100%; at scroll 0px), here with \"Uang masuk dan keluar, tercatat \": at most 3% on a desktop (SR-5)",
+   "fix": "make the sections one screen tall so their headings sit a screen apart and two never share one",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "one-heading"
+   ],
+   "wheres": [
+    "main.auth-shell.min-h-screen > section.flex.min-h-screen > div.w-full.max-w-md > h2.mt-2.text-3xl \"Masuk ke akunmu\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "main.auth-shell.min-h-screen > section.hidden.flex-col \"NNabungNihCatatan keuangan pribadiUang m\"",
+   "msg": "the section needs exactly one in-flow child .wrap (it has 3 in-flow children, 0 .wrap) (SR-6)",
+   "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "main.auth-shell.min-h-screen > section.hidden.flex-col \"NNabungNihCatatan keuangan pribadiUang m\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "main.auth-shell.min-h-screen > section.flex.min-h-screen \"NNabungNihSelamat datang kembaliMasuk ke\"",
+   "msg": "the section needs exactly one in-flow child .wrap (it has 1 in-flow child, 0 .wrap) (SR-6)",
+   "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "main.auth-shell.min-h-screen > section.flex.min-h-screen \"NNabungNihSelamat datang kembaliMasuk ke\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "main.auth-shell.min-h-screen > section.flex.min-h-screen > div.w-full.max-w-md > p.mt-10.text-sm \"Selamat datang kembali\"",
+   "msg": "6 text blocks start on a left line at x 874, 874px from the container's left: text starts on the container's left, or on one split line (x 610, 732, 854) (also \"Masuk ke akunmu\", \"Gunakan email dan password yang \", \"Email\") (SR-6)",
+   "fix": "start the text on the container's left, or on the one split line every split shares",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "main.auth-shell.min-h-screen > section.flex.min-h-screen > div.w-full.max-w-md > p.mt-10.text-sm \"Selamat datang kembali\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "main.auth-shell.min-h-screen > section.flex.min-h-screen > div.w-full.max-w-md > h2.mt-2.text-3xl \"Masuk ke akunmu\"",
+   "msg": "the h2 starts 874px right of the container's left: every h1 and h2 starts on it, 2px either way (SR-6)",
+   "fix": "start the text on the container's left, or on the one split line every split shares",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "main.auth-shell.min-h-screen > section.flex.min-h-screen > div.w-full.max-w-md > h2.mt-2.text-3xl \"Masuk ke akunmu\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "main.auth-shell.min-h-screen > section.hidden.flex-col > div.max-w-xl.pb-10 > p.mb-5.text-sm \"Catatan keuangan pribadi\"",
+   "msg": "4 text blocks start on a left line at x 80, 80px from the container's left: text starts on the container's left, or on one split line (x 610, 732, 854) (also \"Uang masuk dan keluar, tercatat \", \"Lihat saldo dari transaksi dan i\", \"Data keuangan hanya terlihat di \") (and 1 more like it: \"Uang masuk dan keluar, t\") (SR-6)",
+   "fix": "start the text on the container's left, or on the one split line every split shares",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "main.auth-shell.min-h-screen > section.hidden.flex-col > div.max-w-xl.pb-10 > p.mb-5.text-sm \"Catatan keuangan pribadi\""
+   ]
+  },
+  {
+   "check": "no-visual",
+   "where": "main.auth-shell.min-h-screen > section.flex.min-h-screen \"Masuk ke akunmu\"",
+   "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+   "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "no-visual"
+   ],
+   "wheres": [
+    "main.auth-shell.min-h-screen > section.flex.min-h-screen \"Masuk ke akunmu\""
+   ]
+  },
+  {
+   "check": "container",
+   "where": "page",
+   "msg": "no .wrap",
+   "fix": "put the content in one .wrap",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "container"
+   ],
+   "wheres": [
+    "page"
+   ]
+  }
+ ],
+ "waived": [],
+ "warnCount": 10,
+ "at": "2026-11-12T14:06:53.211Z"
+}

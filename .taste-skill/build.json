@@ -1,0 +1,10 @@
+{
+ "page": null,
+ "dir": "C:\\Users\\fifin\\OneDrive\\Desktop\\umkm",
+ "kind": "software",
+ "start": "2026-11-12T13:54:13.040Z",
+ "by": "start.mjs",
+ "url": "http://localhost:3000/login",
+ "category": "personal finance and savings tracking app",
+ "primary": "Record a transaction"
+}
