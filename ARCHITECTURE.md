@@ -83,3 +83,9 @@ Perubahan skema database[cite: 10]:
 - Review migrations before applying them[cite: 10].
 - Set `DATABASE_URL` in the ignored `.env` file, then run `npm run db:generate` to generate the Prisma Client.
 - Review and approve a migration before running it; no migration is applied during initial setup.
+
+## 10. Production Deployment
+- Host the Next.js application on Vercel and use a managed PostgreSQL database such as Neon.
+- Set `DATABASE_URL` to Neon's pooled connection for application runtime, and optionally set `DATABASE_URL_UNPOOLED` to its direct connection for Prisma CLI operations.
+- Set `NEXTAUTH_SECRET` in Vercel's environment settings. Never commit production connection strings or send them through chat.
+- Apply reviewed production migrations with `npm run db:migrate:deploy` only after confirming the target database and receiving approval.
