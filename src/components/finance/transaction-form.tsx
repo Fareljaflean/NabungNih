@@ -29,10 +29,10 @@ export function TransactionForm({
     <form action={formAction} className="space-y-4">
       {initialValue && <input name="id" type="hidden" value={initialValue.id} />}
       <div className="grid gap-4 sm:grid-cols-2">
-        <label className="block text-sm font-medium text-gray-700">
+        <label className="field-label">
           Jenis
           <select
-            className="mt-1 w-full rounded-lg border border-gray-300 bg-white px-3 py-2.5 text-gray-900"
+            className="field-control"
             defaultValue={initialValue?.type ?? "EXPENSE"}
             name="type"
           >
@@ -40,10 +40,10 @@ export function TransactionForm({
             <option value="EXPENSE">Pengeluaran</option>
           </select>
         </label>
-        <label className="block text-sm font-medium text-gray-700">
+        <label className="field-label">
           Nominal (Rp)
           <input
-            className="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2.5 text-gray-900"
+            className="field-control money"
             defaultValue={initialValue?.amount}
             inputMode="decimal"
             maxLength={15}
@@ -52,20 +52,20 @@ export function TransactionForm({
             required
           />
         </label>
-        <label className="block text-sm font-medium text-gray-700">
+        <label className="field-label">
           Kategori
           <input
-            className="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2.5 text-gray-900"
+            className="field-control"
             defaultValue={initialValue?.category}
             maxLength={60}
             name="category"
             required
           />
         </label>
-        <label className="block text-sm font-medium text-gray-700">
+        <label className="field-label">
           Tanggal
           <input
-            className="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2.5 text-gray-900"
+            className="field-control"
             defaultValue={
               initialValue?.date ?? new Date().toISOString().slice(0, 10)
             }
@@ -75,10 +75,10 @@ export function TransactionForm({
           />
         </label>
       </div>
-      <label className="block text-sm font-medium text-gray-700">
+      <label className="field-label">
         Catatan (opsional)
         <input
-          className="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2.5 text-gray-900"
+          className="field-control"
           defaultValue={initialValue?.note ?? ""}
           maxLength={240}
           name="note"
@@ -86,7 +86,7 @@ export function TransactionForm({
       </label>
       <ActionFeedback state={state} />
       <button
-        className="rounded-lg bg-emerald-500 px-4 py-2.5 text-sm font-semibold text-white hover:bg-emerald-600 disabled:cursor-not-allowed disabled:opacity-60"
+        className="button-primary"
         disabled={isPending}
         type="submit"
       >

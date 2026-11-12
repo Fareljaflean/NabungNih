@@ -37,34 +37,34 @@ export function SignInForm() {
   }
 
   return (
-    <form className="mt-6 space-y-4" onSubmit={handleSubmit}>
-      <label className="block text-sm font-medium text-gray-700">
+    <form className="mt-7 space-y-5" onSubmit={handleSubmit}>
+      <label className="field-label">
         Email
         <input
           autoComplete="email"
-          className="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2.5 text-gray-900"
+          className="field-control"
           name="email"
           required
           type="email"
         />
       </label>
-      <label className="block text-sm font-medium text-gray-700">
+      <label className="field-label">
         Password
         <input
           autoComplete="current-password"
-          className="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2.5 text-gray-900"
+          className="field-control"
           name="password"
           required
           type="password"
         />
       </label>
       {error && (
-        <p className="text-sm text-red-600" role="alert">
+        <p className="action-feedback-error" role="alert">
           {error}
         </p>
       )}
       <button
-        className="w-full rounded-lg bg-emerald-500 px-4 py-2.5 font-semibold text-white hover:bg-emerald-600 disabled:cursor-not-allowed disabled:opacity-60"
+        className="button-primary w-full"
         disabled={isSubmitting}
         type="submit"
       >

@@ -9,10 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#10B981",
-        background: "#F9FAFB",
-        danger: "#DC2626",
-        warning: "#F59E0B",
+        primary: "#08734F",
+        background: "#F5F7F3",
+        danger: "#B83232",
+        warning: "#8A5700",
+        ink: "#17271F",
+        muted: "#64736A",
+        line: "#DCE4DD",
+        paper: "#F5F7F3",
       },
     },
   },

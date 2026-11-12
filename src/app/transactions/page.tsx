@@ -20,10 +20,11 @@ export default async function TransactionsPage() {
     >
       <section
         aria-labelledby="create-transaction-heading"
-        className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm md:p-6"
+        className="finance-card"
+        id="new-transaction"
       >
         <h2
-          className="mb-5 text-lg font-semibold text-gray-900"
+          className="mb-5 text-xl font-semibold tracking-tight text-ink"
           id="create-transaction-heading"
         >
           Catat transaksi
@@ -33,9 +34,12 @@ export default async function TransactionsPage() {
 
       <section
         aria-labelledby="transaction-history-heading"
-        className="mt-6 rounded-xl border border-gray-200 bg-white p-5 shadow-sm md:p-6"
+        className="finance-card mt-6"
       >
-        <h2 className="text-lg font-semibold text-gray-900" id="transaction-history-heading">
+        <h2
+          className="border-b border-line pb-4 text-xl font-semibold tracking-tight text-ink"
+          id="transaction-history-heading"
+        >
           Riwayat transaksi
         </h2>
         {transactions.length > 0 ? (
@@ -55,7 +59,7 @@ export default async function TransactionsPage() {
             ))}
           </ul>
         ) : (
-          <p className="mt-3 text-sm text-gray-500">
+          <p className="mt-4 text-sm leading-6 text-muted">
             Belum ada transaksi. Isi formulir di atas untuk mulai mencatat.
           </p>
         )}

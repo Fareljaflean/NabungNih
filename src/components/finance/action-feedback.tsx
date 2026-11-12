@@ -3,14 +3,14 @@ import type { ActionState } from "@/lib/action-state";
 export function ActionFeedback({ state }: { state: ActionState }) {
   if (state.error) {
     return (
-      <p className="text-sm text-red-600" role="alert">
+      <p className="action-feedback-error" role="alert">
         {state.error}
       </p>
     );
   }
   if (state.success) {
     return (
-      <p className="text-sm text-emerald-700" role="status">
+      <p className="action-feedback-success" role="status">
         {state.success}
       </p>
     );

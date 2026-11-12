@@ -17,12 +17,19 @@ export function SavingsMovementForm({
   const label = mode === "add" ? "Tambah dana" : "Tarik dana";
 
   return (
-    <form action={formAction} className="rounded-lg bg-gray-50 p-4">
+    <form
+      action={formAction}
+      className={`border-t p-4 ${
+        mode === "add"
+          ? "border-emerald-700 bg-emerald-50/60"
+          : "border-line bg-white"
+      }`}
+    >
       <input name="goalId" type="hidden" value={goalId} />
-      <label className="block text-sm font-medium text-gray-700">
+      <label className="field-label">
         {label} (Rp)
         <input
-          className="mt-1 w-full rounded-lg border border-gray-300 bg-white px-3 py-2.5 text-gray-900"
+          className="field-control money"
           inputMode="decimal"
           maxLength={15}
           name="amount"
@@ -33,11 +40,7 @@ export function SavingsMovementForm({
       <div className="mt-3 space-y-2">
         <ActionFeedback state={state} />
         <button
-          className={`rounded-lg px-3 py-2 text-sm font-semibold disabled:cursor-not-allowed disabled:opacity-60 ${
-            mode === "add"
-              ? "bg-emerald-500 text-white hover:bg-emerald-600"
-              : "border border-gray-300 bg-white text-gray-700 hover:bg-gray-100"
-          }`}
+          className={mode === "add" ? "button-primary" : "button-secondary"}
           disabled={isPending}
           type="submit"
         >

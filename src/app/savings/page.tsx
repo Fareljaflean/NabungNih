@@ -20,20 +20,23 @@ export default async function SavingsPage() {
     >
       <section
         aria-labelledby="create-goal-heading"
-        className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm md:p-6"
+        className="finance-card"
       >
-        <h2 className="mb-5 text-lg font-semibold text-gray-900" id="create-goal-heading">
+        <h2 className="mb-5 text-xl font-semibold tracking-tight text-ink" id="create-goal-heading">
           Buat target baru
         </h2>
         <SavingsGoalForm />
       </section>
 
-      <section aria-labelledby="goals-heading" className="mt-6">
-        <h2 className="mb-4 text-lg font-semibold text-gray-900" id="goals-heading">
+      <section aria-labelledby="goals-heading" className="mt-10">
+        <h2
+          className="text-xl font-semibold tracking-tight text-ink"
+          id="goals-heading"
+        >
           Target tabunganmu
         </h2>
         {goals.length > 0 ? (
-          <div className="grid gap-5 lg:grid-cols-2">
+          <div className="mt-4 grid gap-4 xl:grid-cols-2">
             {goals.map((goal) => (
               <SavingsGoalCard
                 goal={{
@@ -48,8 +51,8 @@ export default async function SavingsPage() {
             ))}
           </div>
         ) : (
-          <div className="rounded-xl border border-dashed border-gray-300 bg-white p-8 text-center">
-            <p className="font-medium text-gray-900">Belum ada target tabungan</p>
+          <div className="finance-card mt-4">
+            <p className="font-semibold text-ink">Belum ada target tabungan</p>
             <p className="mt-2 text-sm text-gray-500">
               Buat target di atas, lalu tambahkan dana untuk melihat progresnya.
             </p>

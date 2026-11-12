@@ -26,10 +26,10 @@ export function SavingsGoalForm({
   return (
     <form action={formAction} className="space-y-4">
       {initialValue && <input name="id" type="hidden" value={initialValue.id} />}
-      <label className="block text-sm font-medium text-gray-700">
+      <label className="field-label">
         Nama target
         <input
-          className="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2.5 text-gray-900"
+          className="field-control"
           defaultValue={initialValue?.targetName}
           maxLength={80}
           name="targetName"
@@ -37,10 +37,10 @@ export function SavingsGoalForm({
         />
       </label>
       <div className="grid gap-4 sm:grid-cols-2">
-        <label className="block text-sm font-medium text-gray-700">
+        <label className="field-label">
           Nominal target (Rp)
           <input
-            className="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2.5 text-gray-900"
+            className="field-control money"
             defaultValue={initialValue?.targetAmount}
             inputMode="decimal"
             maxLength={15}
@@ -49,10 +49,10 @@ export function SavingsGoalForm({
             required
           />
         </label>
-        <label className="block text-sm font-medium text-gray-700">
+        <label className="field-label">
           Tenggat
           <input
-            className="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2.5 text-gray-900"
+            className="field-control"
             defaultValue={initialValue?.deadline}
             name="deadline"
             required
@@ -62,7 +62,7 @@ export function SavingsGoalForm({
       </div>
       <ActionFeedback state={state} />
       <button
-        className="rounded-lg bg-emerald-500 px-4 py-2.5 text-sm font-semibold text-white hover:bg-emerald-600 disabled:cursor-not-allowed disabled:opacity-60"
+        className="button-primary"
         disabled={isPending}
         type="submit"
       >
