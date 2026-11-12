@@ -87,5 +87,6 @@ Perubahan skema database[cite: 10]:
 ## 10. Production Deployment
 - Host the Next.js application on Vercel and use a managed PostgreSQL database such as Neon.
 - Set `DATABASE_URL` to Neon's pooled connection for application runtime, and optionally set `DATABASE_URL_UNPOOLED` to its direct connection for Prisma CLI operations.
+- Keep Vercel's default build command (`npm run build`); it generates the Prisma Client before building Next.js.
 - Set `NEXTAUTH_SECRET` in Vercel's environment settings. Never commit production connection strings or send them through chat.
 - Apply reviewed production migrations with `npm run db:migrate:deploy` only after confirming the target database and receiving approval.
